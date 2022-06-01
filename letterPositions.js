@@ -1,24 +1,24 @@
-const letterPositions = function (sentence) {
+const letterPositions = function(sentence) {
   const results = {};
-  let lowerCaseSentence = sentence.toLowerCase()
-  console.log(lowerCaseSentence)
-  for(let i = 0; i < lowerCaseSentence.length; i++) {
-    if(lowerCaseSentence[i] === ' ') {
-      continue
+  let lowerCaseSentence = sentence.toLowerCase();
+  console.log(lowerCaseSentence);
+  for (let i = 0; i < lowerCaseSentence.length; i++) {
+    if (lowerCaseSentence[i] === ' ') {
+      continue;
     }
 
-    if(results[lowerCaseSentence[i]] === undefined) {
+    if (results[lowerCaseSentence[i]] === undefined) {
       results[lowerCaseSentence[i]] = [];
     }
-    
-    results[lowerCaseSentence[i]].push(i)
+
+    results[lowerCaseSentence[i]].push(i);
 
   }
-  console.log(results)
+  console.log(results);
   return results;
-  
-  
-}
+
+
+};
 
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
@@ -30,10 +30,10 @@ const eqArrays = function(array1, array2) {
       return false;
     }
   }
-  
+
   return true;
 };
- 
+
 
 const assertArraysEqual = function(actual, expected) {
   if (actual === expected) {
@@ -46,5 +46,5 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 //Test Case
-console.log(assertArraysEqual(letterPositions("hello").e, [2]))
-console.log(assertArraysEqual(letterPositions("LightHouse in the House").h, [3, 5, 15, 18]))
+console.log(assertArraysEqual(letterPositions("hello").e, [2]));
+console.log(assertArraysEqual(letterPositions("LightHouse in the House").h, [3, 5, 15, 18]));
