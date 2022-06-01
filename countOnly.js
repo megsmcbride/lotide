@@ -1,19 +1,19 @@
-const countOnly = function (allItems, itemsToCount) {
+const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
   for (const item of allItems) {
-  
-    
-    if (itemsToCount[item] === true && results[item] === undefined) { 
-      results[item] = 0; 
+
+
+    if (itemsToCount[item] === true && results[item] === undefined) {
+      results[item] = 0;
     }
-    
-    if(itemsToCount[item] === true){
+
+    if (itemsToCount[item] === true) {
       results[item]++;
     }
   }
   return results;
-}
+};
 
 
 const assertEqual = function(actual, expected) {
