@@ -12,27 +12,27 @@ const eqArrays = function(array1, array2) {
 };
 
 
-const assertArraysEqual = function(actual,expected) {
+const assertArraysEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
     return;
   }
   console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
-  
+
 
 };
 
 
 const without = function(source, itemsToRemove) {
-  let output = []
-  for(let number of source) {
-    if(!itemsToRemove.includes(number)) {
-      output.push(number)
+  let output = [];
+  for (let number of source) {
+    if (!itemsToRemove.includes(number)) {
+      output.push(number);
     }
   }
-  return output
-}
+  return output;
+};
 
 
-console.log(without([1, 2, 3], [1]))// => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+console.log(without([1, 2, 3], [1]));// => [2, 3]
+console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
