@@ -29,4 +29,4 @@ const ba = { b: "2", a: "1" };
 assertEqual(ab, ba); // => true
 
 const abc = { a: "1", b: "2", c: "3" };
-assertEqual(ab, abc) // => false
+assertEqual(ab, abc); // => false
