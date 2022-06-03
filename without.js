@@ -12,16 +12,15 @@ const eqArrays = function(array1, array2) {
 };
 
 
-const assertArraysEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+const assertArraysEqual = function(array1, array2) {
+  if (eqArrays(array1, array2)) {
+    console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
     return;
   }
-  console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
+  console.log(`❌❌❌ Assertion Failed: ${array1} !== ${array2}`);
 
 
 };
-
 
 const without = function(source, itemsToRemove) {
   let output = [];
@@ -34,5 +33,11 @@ const without = function(source, itemsToRemove) {
 };
 
 
-console.log(without([1, 2, 3], [1]));// => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
+
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]); 
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
+const words2 = [];
+without(words2, ["lighthouse"]); 
+assertArraysEqual(words2, ["hello", "world", "lighthouse"]);
