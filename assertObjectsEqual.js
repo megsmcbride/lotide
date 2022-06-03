@@ -21,8 +21,8 @@ const assertObjectsEqual = function(object1, object2) {
   if (eqObjects(object1, object2)) {
     console.log(`✅✅✅ Assertion Passed: ${inspect(object1)} === ${inspect(object2)}`);
     return;
-  } 
-    
+  }
+
   console.log(`❌❌❌ Assertion Failed: ${inspect(object1)}!== ${inspect(object2)}`);
 
 };
