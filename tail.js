@@ -1,6 +1,8 @@
 const tail = (element => {
   let output = element.slice(1);
-  console.log(output);
+  return output;
+
 });
 
 module.exports = tail;
+
