@@ -3,4 +3,4 @@ const tail = (element => {
   console.log(output);
 });
 
-module.exports = tail
+module.exports = tail;
