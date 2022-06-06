@@ -1,5 +1,5 @@
 const head = (element => {
-  return element[0]
-})
+  return element[0];
+});
 
-module.exports = head
+module.exports = head;
